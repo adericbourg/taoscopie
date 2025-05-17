@@ -1,9 +1,9 @@
 'use client';
 
-import { Container, Row, Col, Button, Stack } from 'react-bootstrap';
+import { Container, Row, Col, Stack } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 
-export default function Presentation({ onComplete }: { onComplete: () => void }) {
+export default function Presentation() {
     return (
         <Container>
             <Row>
@@ -33,13 +33,6 @@ export default function Presentation({ onComplete }: { onComplete: () => void })
                         </p>
 
                     </Stack>
-                </Col>
-            </Row>
-            <Row>
-                <Col md={{ span: 8, offset: 2 }} className='text-center'>
-                    <Button variant="primary" size="lg" onClick={onComplete}>
-                        Commencer
-                    </Button>
                 </Col>
             </Row>
             <Row>
