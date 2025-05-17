@@ -8,7 +8,7 @@ export default function Presentation({ onComplete }: { onComplete: () => void })
         <Container>
             <Row>
                 <Col md={{ span: 8, offset: 2 }} className='text-center'>
-                    <Image src="/img/presentation_top.png" alt="Mosaique de plusieurs archétypes" fluid />
+                    <Image src="./img/presentation_top.png" alt="Mosaique de plusieurs archétypes" fluid />
                 </Col>
             </Row>
             <Row>
@@ -44,7 +44,7 @@ export default function Presentation({ onComplete }: { onComplete: () => void })
             </Row>
             <Row>
                 <Col md={{ span: 8, offset: 2 }} className='text-center'>
-                    <Image src="/img/presentation_bottom.png" alt="Mosaique de plusieurs archétypes" fluid />
+                    <Image src="./img/presentation_bottom.png" alt="Mosaique de plusieurs archétypes" fluid />
                 </Col>
             </Row>
         </Container>

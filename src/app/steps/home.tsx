@@ -8,7 +8,7 @@ export default function Home({ onComplete }: { onComplete: () => void }) {
         <Container>
             <Row>
                 <Col md={{ span: 8, offset: 2 }} className='text-center'>
-                    <Image src="/img/hero.png" alt="Mosaique de plusieurs archétypes" fluid />
+                    <Image src="./img/hero.png" alt="Mosaique de plusieurs archétypes" fluid />
                 </Col>
             </Row>
             <Row>
