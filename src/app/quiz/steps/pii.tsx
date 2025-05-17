@@ -2,16 +2,14 @@
 
 import { Card, CardBody, CardText, CardTitle, Form } from "react-bootstrap";
 
-export default function PII({ pii, setPii }: { pii: any, setPii: (pii: any) => void }) {
+export default function PII({ pii }: { pii: any }) {
 
     function setFirstName(value: string) {
         pii.firstName = value;
-        setPii(pii);
     }
 
     function setGender(value: string) {
         pii.gender = value;
-        setPii(pii);
     }
 
     return (
