@@ -3,49 +3,34 @@
 import { useState } from "react";
 import Home from "./steps/home";
 import Presentation from "./steps/presentation";
+import { Item } from "./util/Item";
 
 export default function Quiz() {
 
-  const [currentStep, setCurrentStep] = useState('home');
+  const quizHead = buildQuiz();
+  const [currentStep, setCurrentStep] = useState(quizHead);
 
   function showStep(step: string) {
-    return currentStep === step;
+    return currentStep.value === step;
   }
 
-  function completeStep(step: string) {
+  function completeStep() {
     // TODO: Extract "get next step" logic to use the linked list
-    switch (step) {
-      case 'home': {
-        setCurrentStep('presentation')
-        break;
-      }
-      case 'presentation': {
-        setCurrentStep('quiz1')
-        break;
-      }
-      default: {
-        // TODO: reaching here is a bug, handle case
-      }
+    const nextStep = currentStep.next;
+    if (!!nextStep) {
+      setCurrentStep(nextStep)
     }
-  }
-
-  function showPresentation() {
-    completeStep('home');
-  }
-
-  function startQuiz() {
-    completeStep('presentation');
   }
 
   return (
     <>
-      {showStep('home') && <Home onComplete={showPresentation} /> }
-      {showStep('presentation') && <Presentation onComplete={startQuiz} /> }
+      {showStep('home') && <Home onComplete={completeStep} />}
+      {showStep('presentation') && <Presentation onComplete={completeStep} />}
     </>
   );
 }
 
-function buildQuiz() {
+function buildQuiz(): Item<string> {
   const home = new Item('home');
 
   const presentation = new Item('presentation');
@@ -54,4 +39,5 @@ function buildQuiz() {
 
   // etc
 
+  return home;
 }
