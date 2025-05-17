@@ -3,7 +3,7 @@
 import { Container, Row, Col, Button, Stack } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 
-export default function Presentation({ onComplete }) {
+export default function Presentation({ onComplete }: { onComplete: () => void }) {
     return (
         <Container>
             <Row>

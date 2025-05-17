@@ -3,7 +3,7 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 
-export default function Home({onComplete}) {
+export default function Home({ onComplete }: { onComplete: () => void }) {
     return (
         <Container>
             <Row>
