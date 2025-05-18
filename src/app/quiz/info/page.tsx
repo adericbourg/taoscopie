@@ -20,14 +20,11 @@ export default function UserInfo() {
                                     <Form>
                                         <Form.Group controlId="pii-first-name">
                                             <Form.Label>Prénom</Form.Label>
-                                            <Form.Control
-                                                controlId="pii-first-name" />
+                                            <Form.Control />
                                         </Form.Group>
                                         <Form.Group controlId="pii-gender">
                                             <Form.Label>Genre</Form.Label>
-                                            <Form.Select
-                                                aria-label="Genre"
-                                                controlId='pii-gender'>
+                                            <Form.Select aria-label="Genre">
                                                 <option></option>
                                                 <option value="HOMME">Homme</option>
                                                 <option value="FEMME">Femme</option>
