@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row } from "react-bootstrap";
 import { Button } from 'react-bootstrap';
 import { Image } from 'react-bootstrap';
@@ -21,7 +20,7 @@ export default function Index() {
           </Row>
           <Row>
             <Col md={{ span: 8, offset: 2 }} className='text-center'>
-              <Button variant="primary" size="lg" href="/quiz">
+              <Button variant="primary" size="lg" href="./quiz">
                 Commencer
               </Button>
             </Col>
